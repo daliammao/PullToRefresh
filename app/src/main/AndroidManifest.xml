@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.daliammao.pulltorefresh" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.WithGridViewActivity"/>
+        <activity android:name=".activity.WithTextViewInFrameLayoutActivity"/>
+        <activity android:name=".activity.WithTextViewActivity"/>
+        <activity android:name=".activity.WithListViewActivity"/>
+        <activity android:name=".activity.WithWebViewActivity"/>
+        <activity android:name=".activity.WithListViewAndEmptyViewActivity"/>
+        <activity android:name=".activity.WithScrollViewActivity"/>
+        <activity android:name=".activity.KeepHeaderActivity"/>
+        <activity android:name=".activity.HideHeaderActivity"/>
+        <activity android:name=".activity.ReleaseToRefreshActivity"/>
+        <activity android:name=".activity.PullToRefreshActivity"/>
+        <activity android:name=".activity.AutoRefreshActivity"/>
+        <activity android:name=".activity.StoreHouseActivity"/>
+        <activity android:name=".activity.RentalsStyleActivity"/>
+        <activity android:name=".activity.WithViewPageActivity"/>
+    </application>
+
+</manifest>

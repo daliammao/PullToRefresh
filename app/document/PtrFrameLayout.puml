@@ -1,0 +1,40 @@
+@startuml
+(*)-->"事件到来"
+if"控件isEnable并且content不为空\n而且header或footer不为空"then
+-->[Y]if"判断事件类型"then
+    -->[ACTION_DOWN]"记录按下的位置,状态等\n返回true"
+    -->"初始化滑动计算组件"
+    -->(*)
+    else
+    -->[ACTION_MOVE]"记录移动等偏移值"
+    -->if"如果不阻止横向移动\n并且判断为横向移动"then
+    -->[Y]"父类处理2"
+    -->(*)
+    else
+    -->[N]if"判断是否可以纵向move\n显示header"then
+          -->[Y]"移动位置\n返回true1"
+          -->(*)
+          else
+          -->[N]if"判断是否可以纵向move\n显示footer"then
+              -->[Y]"移动位置\n返回true2"
+              -->(*)
+              else
+              -->[N]"父类处理3"
+              -->(*)
+              endif
+          endif
+    endif
+    else
+    -->[ACTION_UP\nACTION_CANCEL]if"当前位置在起始位置"then
+                                 -->[Y]"父类处理4"
+                                 -->(*)
+                                 else
+                                 -->[N]"执行onRelease方法.\n根据偏移程度触发刷新或加载\n或者回复到起始位置"
+                                 -->(*)
+                                 endif
+    endif
+else
+-->[N]"父类处理1"
+-->(*)
+endif
+@enduml
