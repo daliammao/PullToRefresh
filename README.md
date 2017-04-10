@@ -95,4 +95,4 @@ public interface PtrHandler {
 ```
 
 <br/>
-感谢liaohuqiu 提供的[android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)本项目基于该项目开发，不同的是我添加了上拉加载的功能。
+感谢liaohuqiu 提供的[android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh) 本项目基于该项目开发，不同的是我添加了上拉加载的功能。
